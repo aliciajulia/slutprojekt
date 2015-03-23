@@ -1,0 +1,4 @@
+databasdriven administrationssida
+-komplexa frågor mot databasen
+-optimerad databas
+-kunna ändra typ texter

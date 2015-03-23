@@ -1,0 +1,672 @@
+body {
+    /*    background-color: #A5FFD7;*/
+    background-image: url(Bilder/4562026127_e86daef00e_z.jpg);
+    overflow: scroll;
+}
+
+
+/*//allmäna egenskaper*/
+h1 {
+    /*    font-family: 'Libre Baskerville', serif;*/
+    font-size: 40px;
+    padding: 0 20px;
+    font-family: Giddyup Std;  
+
+}
+h2 {
+    /*        font-family: 'Libre Baskerville', serif;*/
+    font-size: 25px;
+    padding: 10px 20px;
+    font-family: Giddyup Std;
+}
+p {
+    font-size: 15px;
+    padding: 0 20px;
+}
+button, .btn_popUp {
+    background-color: #FFAE8A;
+    border: 2px;
+    border-radius: 5px;
+    /*    font-family: 'Libre Baskerville', serif;*/
+    font-family: Giddyup Std;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*//bestämda divar*/
+#wrapper {
+    width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 20px;
+}
+
+#top {
+    height: 264px;
+
+}
+#top img {
+    margin: 0 323px;
+    height: 264px;
+    width: 374px;
+}
+#top a {
+    float: right;
+    position: absolute;
+}
+/*#top_logga {
+    height: 120px;
+    background-color: lightskyblue;
+    width: 760px;
+    float: left;
+    position: absolute;
+}
+*/
+#top_lankar {
+    height: 20px;
+    background-color: white;
+    width: 60px;
+    float: left;
+    text-align: right;
+    
+}
+#top_lankar a {
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    margin-top: 0px;
+}
+#top_lankar a:hover {
+    color: #A8A6E8;
+    background-color: white;
+}
+
+/*navbar omstylning börjar här*/
+#nav {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1020px;
+    /*    border-radius: 2px;
+        border-top: 2px;
+        border: solid grey;*/
+    background-color: white;
+
+
+}
+#nav ul li a:hover , #nav ul li .active{
+    background-color: #99CDFF;
+    /*    border-radius: 5px;
+        border: 2px;*/
+    color: black;
+    /*    border-top-left-radius: 5px;*/
+
+}
+
+#nav ul {
+    list-style-type:none;
+    text-align: center;
+}
+#nav ul li {
+    display: block;
+    float: left;
+}
+#nav ul li a {
+    display:block;
+    text-decoration: none;
+    font-weight:bold;
+    text-align:center;
+    font-size: 30px;
+    height: 26px;
+    width: 255px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+    background-color: white;
+    color: grey;
+    font-family: Giddyup Std;
+    /*    border-top-left-radius: 5px;*/
+
+}
+#nav ul li ul  {
+    float: none; /*s� dom �ker ner�t*/
+    z-index: 2;
+    display: none; /*s� dom inte syns*/
+    position: absolute;
+
+
+}
+#nav ul li ul li {
+    float: none;
+    z-index: 2;
+}
+#nav ul li:hover ul  {
+    float: none;
+    display: block; /*så dom syns*/
+    z-index: 2;
+
+}
+#nav ul li a.topLeft{
+    border-top: 2px;
+    border-top-left-radius: 5px;
+
+}
+#nav .topRight {
+    border-top: 2px;
+    border-top-right-radius: 5px;
+}
+/*#header {
+    height: 400px;
+    padding: 0;
+    z-index: 1;
+    margin: 36px 0 0 0;
+}*/
+.header {
+    position: relative; 
+    overflow: auto; 
+    margin: 0;
+    background-color: white;
+}
+.header li { 
+    list-style: none; 
+}
+.header ul li {
+    float: left; 
+}
+
+#content {
+    /*    height: 600px;*/
+    background-color: white;
+    /*    padding: 20px;*/
+
+
+}
+#content .colums_om {
+    width: 497px;
+    display: inline-block;
+    padding: 20px 0;
+}
+#content .colums_om img {
+    float: right;
+}
+#content .tva_columner {
+    columns:100px 2;
+    -webkit-columns:100px 2; /* Safari and Chrome */
+    -moz-columns:100px 2; /* Firefox */
+    padding: 20px;
+}
+
+#content .index_tre {
+    width: 337px;
+    display: inline-block;
+    padding: 20px 0;
+}
+#content .index_tre button {
+    font-size: 20px;
+    margin-left: 240px;
+}
+#content #loggaWSPA {
+    margin: 0 151.5px 0 151.1px;
+}
+
+#content .aterforsaljare img {
+    /*    margin: 20px;*/
+    /*    border: solid orange;*/
+    float: bottom;
+    width: 200px;
+    height: 100px;
+
+
+}
+#content #aterforsaljare1{
+    float: bottom;
+}
+#content .aterforsaljare h2 {
+    /*    float: left;*/
+    /*    border: solid blue;*/
+    /*    margin: 10px;*/
+    width: 200px;
+    padding: 5px 0 5px 0;
+
+}
+#content .aterforsaljare {
+    /*    float: left;*/
+    margin: 26px;
+    display: inline-block;
+
+}
+#content .pop_up {
+    display: none;
+}
+/*Raden nedan funkar inte, VARFÖR??*/
+#content .pop_up  {
+    background-color: white;
+    height: 100px;
+    width: 100px;
+}
+
+/*//UTBUD.HTML//*/
+#content #content_boxar {
+    margin: 0 15px 15px 15px;
+    height: 1000px;
+}
+#content #content_boxar .vara {
+    border: solid thin #FFB895;
+    border-radius: 5px;
+    width: 314px;
+    height: 490px;
+    display: inline-block;
+    margin: 5px 5px 5px 5px;
+    /*    float: left;*/
+}
+#content .vara h1 {
+    text-align: center;
+    padding: 10px;
+}
+#content .vara a{
+    height: 30px;
+    width: 110px;
+    font-size: 20px;
+    margin: 0px 0px 0px 100px; 
+    /*Kolla om detta verkligen är i mitten*/
+    padding: 5px;
+}
+#content .vara  p {
+    text-align: center;
+}
+#content .vara img {
+    margin: 7px 0 5px 7px;
+    margin-top:  -10px;
+    height: 400px; 
+    width: 300px;
+    /*    float: left;*/
+}
+#content #content_boxar .vara .pop_up .animal img {
+    margin: 20px;
+}
+#content #content_boxar .vara .pop_up .animal h1, #content #content_boxar .vara .pop_up .animal p {
+    float: right;
+    margin: 20px;
+    color: blue;
+}
+
+/*//kontakt funktion//*/
+fieldset{
+    padding: 0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+legend{
+    font-size: larger;
+}
+#kontakt p {
+    padding: 0;
+}
+
+#kontakt form p, select {
+    position: relative; /* position absolute */
+    margin: 10px;
+}
+
+label{
+    display: inline-block;
+    width: 85px;
+    margin-right: 5px;
+    text-align: right;
+    vertical-align: top;
+
+}
+
+label > strong{
+    position: absolute;
+    left: 305px;
+    text-align: left;
+}
+
+input[type="text"], input[type="email"], select{
+    width: 200px;
+    padding: 0;
+    margin:0;
+}
+
+textarea{
+    width: 202px;
+    height: 100px;
+    resize: vertical;
+    padding: 0;
+}
+
+input[type="submit"]{
+    display: block;
+    margin: auto;
+}
+
+#kontakt{
+    margin-right: auto;
+    margin-left: auto;
+}
+select {
+    margin-left: 1px;
+    width: 202px;
+}
+#button2, #kontakt p {
+    margin-left: 20px;
+}
+/*//slut kontaktruta//*/
+#footer {
+    height: 60px;
+    background-color: white;
+    margin-bottom: 20px;
+    border-bottom: 2px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#footer #logga img{
+    float: right;
+    margin-right: 50px;
+
+
+}
+#footer p {
+    width: 580px;
+    float: left;
+    height: 48px;
+    width: 640px;
+}
+#footer #icons {
+    float: right;
+    margin-right: 5px;
+}
+#footer #icons img {
+    height: 48px;
+    width: 48px;
+}
+
+/*HÄR BÖRJAR EGENSKAPERNA FÖR RESPONSIV DESIGN*/
+
+@media screen and (max-width: 1020px) {
+    #wrapper{
+        width: 94%;
+    }
+    #top {
+        height: 30%;     
+    }
+    #top img {
+        margin: 0;
+        width: 30%;
+
+    }
+
+    #nav {
+        width: 100%;
+    }   
+    #nav ul li {
+        width: 19.6%;
+        /*padding: 10px;*/
+    }
+    #nav ul li a {
+        width: 100%;
+        padding: 4px;
+        margin: 0 5px;
+    }
+    #nav ul li ul li {
+        width: 100%;
+    }
+    #nav ul li ul li a {
+        padding: 4px;
+        text-align: center;
+    }
+    .header {
+        width: 80%;
+        margin: 0;
+    }  
+
+    .header img {
+        width: 100%;
+        margin: 0;
+    }
+    #content {
+        width: 80%;
+    }
+    #content #loggaWSPA {
+        margin: 77px;
+        width: 80%;
+    }
+    #content #content_boxar {
+        height: 1500px;
+    }
+    #footer {
+        width: 80%;
+        height: 100px;
+    }
+    #footer p {
+        width: 300px;
+        float: left;
+
+    }
+
+}
+
+@media screen and (max-width: 980px) {
+    #wrapper{
+        width: 700px;
+    }
+    #content {
+        width: 560px;
+    }
+    #nav {
+        width: 100%;
+    }   
+    #nav ul li {
+        width: 19.7%;
+        margin: 0px;
+    }
+    #nav ul li a {
+        width: 100%;
+        padding: 4px;
+        margin: 0 0px;
+    }
+    #nav ul li ul li {
+        width: 100%;
+    }
+    #nav ul li ul li a {
+        padding: 4px;
+        text-align: center;
+    }
+    .header {
+        width: 80%;
+        margin: 0;
+    }  
+
+    .header img {
+        width: 100%;
+        margin: 0;
+    }
+
+    #footer {
+        width: 80%;
+        height: 100px;
+    }
+    #footer p {
+        width: 100px;
+        float: left;
+
+    }
+    #content #content_boxar{
+        height: 1300px;
+    }
+    #content .index_tre {
+        width: 540px;
+        margin: 10px;
+        text-align: center;
+    }
+    #content #content_boxar .vara {
+        height: 410px;
+        width: 47%;        
+    } 
+    #content .vara img{
+        height: -95%;
+        width: 95%;
+    }
+    #content .vara a{
+        /*    height: 30px;
+            width: 110px;*/
+        /*    font-size: 20px;*/
+        margin: 40px 80px 40px 85px; 
+        /*Kolla om detta verkligen är i mitten*/
+        padding: 5px;
+    }
+
+}
+@media screen and (max-width: 580px) {
+    #wrapper {
+        width: 94%;
+    }
+    #nav {
+        width: 100%;
+    }   
+    #nav ul li {
+        width: 92%;
+        margin: 0px;
+        float: none;
+    }
+    #nav ul li a {
+        width: 100%;
+        padding: 4px 20px;
+        margin: 0 0px;
+    }
+    #nav ul li ul li {
+        width: 100%;
+        float: left;
+    }
+    #nav ul li ul li a {
+        padding: 4px;
+        text-align: center;
+    }
+    #nav ul li a.topLeft{
+        border-top: 0px;
+        border-top-left-radius: 0px;
+
+    }
+    #nav .topRight {
+        border-top: 0px;
+        border-top-right-radius: 0px;
+    }
+    #nav ul li:hover ul  {
+        float: left;
+        display: inline-block; /*så dom syns*/
+        z-index: 2;
+
+    } 
+    .header {
+        width: 100%;
+        margin: 0;
+    }  
+
+    .header img {
+        width: 100%;
+        margin: 0;
+    }
+
+    #content {
+        width: 100%;
+    }
+    #content .index_tre {
+        width: 94%;
+        margin: 10px;
+        text-align: center;
+    }
+    #content .colums_om {
+        width: 94%;
+        display: inline-block;
+
+        padding: 20px 0;
+    }
+    #content .tva_columner {
+        columns: auto auto;
+        -webkit-columns:auto auto;  
+        -moz-columns:auto auto; 
+        padding: 20px;
+    }
+    #content .vara a{
+        /*    height: 30px;
+            width: 110px;*/
+        font-size: 17px;
+        margin: 0px 0px 0px 10px; 
+        /*Kolla om detta verkligen är i mitten*/
+        padding: 5px;
+    }
+    #content #content_boxar .vara {
+        height: 16%;
+        width: 47%;        
+    } 
+    #content #content_boxar{
+        height: 2500px;
+    }
+    #footer {
+        width: 100%;
+        height: 130px;
+    }
+    #footer p {
+        width: 94%;
+        /*        float: left;*/
+
+    }
+    #footer #logga img{
+        float: none;
+        margin-left: 10px;
+
+    }
+
+}
+@media screen and (max-width: 400px) {
+    #wrapper {
+        width: 94%;
+    }
+    #nav {
+        width: 94%;
+        margin: 0;
+    }
+    #nav ul li {
+        width: 93%;
+        margin: 0px;
+        float: none;
+    }
+    #content #content_boxar .vara {
+        width: 94%;
+        height: 16%;
+    }
+    #content #content_boxar{
+        height: 3000px;
+    }
+    #footer {
+        width: 100%;
+        height: 180px;
+    }
+    #footer #logga img{
+        float: none;
+        margin: 10px 0 0 10px;   
+        height: 40%;
+        width: 40%;
+    }
+    #footer #icons {
+        float: right;
+        margin-top: 10px;
+        display: inline-block;
+    }
+    #content .index_tre button {
+        font-size: 20px;
+        margin-left: 0px;
+    }
+    #content #loggaWSPA {
+        margin: 30px;
+        width: 80%;
+    }
+}
+
+
+
+
