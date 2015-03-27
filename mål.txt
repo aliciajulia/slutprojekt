@@ -2,3 +2,10 @@ databasdriven administrationssida
 -komplexa frågor mot databasen
 -optimerad databas
 -kunna ändra typ texter
+
+Att göra
+-inlog
+-skriva in html koden -> php
+-göra redigerbara boxar
+-lägga in texterna i databasen
+-kolla om man kan ha bilder i databasen
