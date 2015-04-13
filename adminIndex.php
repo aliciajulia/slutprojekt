@@ -10,8 +10,8 @@ if ($_SESSION['inlog'] == 1) {
 //    hämta hem texter från db för att kunna skriva ut dom i formulären
     $sql = "SELECT * FROM `index`";
     $stmt = $dbh->prepare($sql);
-    $stmt->bindParam(":anvnam", $anvnam);
-    $stmt->bindParam(":losord", $losord);
+//    $stmt->bindParam(":anvnam", $anvnam);
+//    $stmt->bindParam(":losord", $losord);
     $stmt->execute();
     $data = $stmt->fetchAll();
 //    var_dump($data["0"]["content"]);
@@ -44,7 +44,7 @@ if ($_SESSION['inlog'] == 1) {
                 <div id="nav">
                     <ul>
                         <li ><a class="topLeft active" href="adminIndex.php">Homepage</a></li>
-                        <li><a href="om.html">About</a></li>
+                        <li><a href="adminOm.php">About</a></li>
                         <li><a href="foretagside.html">Business Idea</a>
                             <ul>
                                 <li><a href="adminAterforsaljare.php">Resellers</a></li>

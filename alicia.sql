@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 4.2.7.1
 -- http://www.phpmyadmin.net
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 12 apr 2015 kl 21:33
--- Serverversion: 5.6.21
--- PHP-version: 5.6.3
+-- Tid vid skapande: 13 apr 2015 kl 10:57
+-- Serverversion: 5.6.20
+-- PHP-version: 5.5.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -64,6 +64,33 @@ CREATE TABLE IF NOT EXISTS `inlog` (
 
 INSERT INTO `inlog` (`username`, `password`) VALUES
 ('alicia', 'alicia');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellstruktur `om`
+--
+
+DROP TABLE IF EXISTS `om`;
+CREATE TABLE IF NOT EXISTS `om` (
+  `id` varchar(5) NOT NULL,
+  `content` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumpning av Data i tabell `om`
+--
+
+INSERT INTO `om` (`id`, `content`) VALUES
+('h2-1', 'CEO - Alicia Broberg'),
+('p-1', 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids'),
+('h2-2', 'PR Director - Lovisa Schenning'),
+('p-2', 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids'),
+('h2-3', 'Economy Director - Rebecka Ekström'),
+('p-3', 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids'),
+('h2-4', 'Market Manager - Martin Benno Klevbrand'),
+('p-4', 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids'),
+('h1', 'The Persons Behind BearHug');
 
 --
 -- Index för dumpade tabeller
