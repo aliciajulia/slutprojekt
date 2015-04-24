@@ -1,10 +1,11 @@
 <?php
 //
-define("DB_SERVER", "localhost");
-define("DB_USER", "root");
-define("DB_PASSWORD", "");
-define("DB_NAME", "alicia");
-$dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
+//define("DB_SERVER", "localhost");
+//define("DB_USER", "root");
+//define("DB_PASSWORD", "");
+//define("DB_NAME", "berzanhe_alicia");
+//$dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
+include 'connectDb.php';
 session_start();
 if ($_SESSION['inlog'] == 1) {
 //var_dump($_SESSION);
@@ -15,7 +16,8 @@ if ($_SESSION['inlog'] == 1) {
 //    $stmt->bindParam(":losord", $losord);
     $stmt->execute();
     $data = $stmt->fetchAll();
-//    var_dump($data["0"]["content"]);
+//    var_dump($data);
+//    var_dump($data[1][1]);
     ?>
 
     <!DOCTYPE html>
@@ -67,14 +69,14 @@ if ($_SESSION['inlog'] == 1) {
                         <!--<br>-->
                         <?php
                         echo "<form method='POST' action='doUpdate.php'>
-                            <input type='text' value='h2-1' name='content'> 
+                            <input type='text' value='".$data[0][1]."' name='content'> 
                         <input type='hidden' name='id' value='h2-1'>
                         <input type='hidden' name='om' value='om'>
                             </form>";
 //                    <h2>CEO - Alicia Broberg</h2>
 //                    <img src = "Bilder/egna/bild-4.JPG" alt = "aliciaBroberg">
                         echo '<form method="POST" action="doUpdate.php">
-                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="p1">
+                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="'.$data[1][1].'">
                             <input type="hidden" name="id" value="p-1">
                             <input type="hidden" name="om" value="om">
                         </form>';
@@ -85,14 +87,14 @@ if ($_SESSION['inlog'] == 1) {
                     <div class="colums_om">
                         <?php
                         echo "<form method='POST' action='doUpdate.php'>
-                            <input type='text' value='h2-2' name='content'> 
+                            <input type='text' value='".$data[2][1]."' name='content'> 
                         <input type='hidden' name='id' value='h2-2'>
                         <input type='hidden' name='om' value='om'>
                             </form>";
 //                    <h2>CEO - Alicia Broberg</h2>
 //                    <img src = "Bilder/egna/bild-4.JPG" alt = "aliciaBroberg">
                         echo '<form method="POST" action="doUpdate.php">
-                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="p2">
+                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="'.$data[3][1].'">
                             <input type="hidden" name="id" value="p-2">
                             <input type="hidden" name="om" value="om">
                         </form>';
@@ -107,14 +109,14 @@ if ($_SESSION['inlog'] == 1) {
                     <div class="colums_om">
                         <?php
                         echo "<form method='POST' action='doUpdate.php'>
-                            <input type='text' value='h2-3' name='content'> 
+                            <input type='text' value='".$data[4][1]."' name='content'> 
                         <input type='hidden' name='id' value='h2-3'>
                         <input type='hidden' name='om' value='om'>
                             </form>";
 //                    <h2>CEO - Alicia Broberg</h2>
 //                    <img src = "Bilder/egna/bild-4.JPG" alt = "aliciaBroberg">
                         echo '<form method="POST" action="doUpdate.php">
-                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="p3">
+                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="'.$data[5][1].'">
                             <input type="hidden" name="id" value="p-3">
                             <input type="hidden" name="om" value="om">
                         </form>';
@@ -130,14 +132,14 @@ if ($_SESSION['inlog'] == 1) {
                     <div class="colums_om">
                         <?php
                         echo "<form method='POST' action='doUpdate.php'>
-                            <input type='text' value='h2-4' name='content'> 
+                            <input type='text' value='".$data[6][1]."' name='content'> 
                         <input type='hidden' name='id' value='h2-4'>
                         <input type='hidden' name='om' value='om'>
                             </form>";
 //                    <h2>CEO - Alicia Broberg</h2>
 //                    <img src = "Bilder/egna/bild-4.JPG" alt = "aliciaBroberg">
                         echo '<form method="POST" action="doUpdate.php">
-                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="p4">
+                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="'.$data[7][1].'">
                             <input type="hidden" name="id" value="p-4">
                             <input type="hidden" name="om" value="om">
                         </form>';

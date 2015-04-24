@@ -1,10 +1,13 @@
 <?php
 
-define("DB_SERVER", "localhost");
-define("DB_USER", "root");
-define("DB_PASSWORD", "");
-define("DB_NAME", "alicia");
-$dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
+//define("DB_SERVER", "berzan.hemsida.eu");
+//define("DB_USER", "berzanhe_alicia");
+//define("DB_PASSWORD", "muffinsmamma");
+//define("DB_NAME", "berzanhe_alicia");
+//$dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
+
+include 'connectDb.php';
+
 session_start();
 
 function checkLogin($username, $password, $dbh) {

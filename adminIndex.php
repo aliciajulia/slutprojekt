@@ -1,9 +1,12 @@
 <?php
-define("DB_SERVER", "localhost");
-define("DB_USER", "root");
-define("DB_PASSWORD", "");
-define("DB_NAME", "alicia");
-$dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
+//define("DB_SERVER", "berzan.hemsida.eu");
+//define("DB_USER", "berzanhe_alicia");
+//define("DB_PASSWORD", "muffinsmamma");
+//define("DB_NAME", "berzanhe_alicia");
+//$dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
+
+include 'connectDb.php';
+
 session_start();
 if ($_SESSION['inlog'] == 1) {
 //var_dump($_SESSION);
@@ -30,7 +33,7 @@ if ($_SESSION['inlog'] == 1) {
             <div id="wrapper">
                 <div id="top"> 
                     <a href="index.html"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
-                    <!--<a href="login.php">Logga in</a>-->
+                    <a href="doLogout.php">Logga ut</a>
                     <!--<div id="top_logga">-->
 
                     <!--</div>-->
@@ -48,10 +51,10 @@ if ($_SESSION['inlog'] == 1) {
                         <li><a href="foretagside.html">Business Idea</a>
                             <ul>
                                 <li><a href="adminAterforsaljare.php">Resellers</a></li>
-                                <li><a href="utbud.html">Product Range</a></li>
+                                <li><a href="adminUtbud.php">Product Range</a></li>
                             </ul>
                         </li>
-                        <li ><a class="topRight" href="kontakt.html">Contact</a></li>
+                        <li ><a class="topRight" href="adminKontakt.php">Contact</a></li>
                     </ul>
                 </div>
                 <!--            <br>
@@ -79,59 +82,59 @@ if ($_SESSION['inlog'] == 1) {
                     <div class="index_tre">
                         <?php
                         echo '<form method="POST" action="doUpdate.php">
-                        <input type="text" name="content" value="'.$data["0"]["content"].'">
+                        <input type="text" name="content" value="' . $data["0"]["content"] . '">
                         <input type="hidden" name="id" value="h1-1">
                         <input type="hidden" name="index" value="index">
                     </form>';
 
                         echo '<form method="POST" action="doUpdate.php">
-                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="'.$data["1"]["content"].'">
+                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="' . $data["1"]["content"] . '">
                             <input type="hidden" name="id" value="p-1">
                             <input type="hidden" name="index" value="index">
                         </form>';
-                                ?>
+                        ?>
                         <!--<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some </p>-->
                         <button>Read More..
                         </button>
 
                     </div>
                     <div class="index_tre">
-                         <?php
+                        <?php
                         echo '<form method="POST" action="doUpdate.php">
-                        <input type="text" name="content" value="'.$data["2"]["content"].'">
+                        <input type="text" name="content" value="' . $data["2"]["content"] . '">
                         <input type="hidden" name="id" value="h1-1">
                         <input type="hidden" name="index" value="index">
                     </form>';
-                        
-                        
+
+
 
                         echo '<form method="POST" action="doUpdate.php">
-                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="'.$data["3"]["content"].'">
+                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="' . $data["3"]["content"] . '">
                             <input type="hidden" name="id" value="p-1">
                             <input type="hidden" name="index" value="index">
                         </form>';
-                                ?>
+                        ?>
                         <!--<h1>Our vison</h1>-->
                         <!--<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some </p>-->
                         <button>Read More..
                         </button>
                     </div>
                     <div class="index_tre">
-                         <?php
+                        <?php
                         echo '<form method="POST" action="doUpdate.php">
-                        <input type="text" name="content" value="'.$data["4"]["content"].'">
+                        <input type="text" name="content" value="' . $data["4"]["content"] . '">
                         <input type="hidden" name="id" value="h1-1">
                         <input type="hidden" name="index" value="index">
                     </form>';
-                        
-                        
+
+
 
                         echo '<form method="POST" action="doUpdate.php">
-                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="'.$data["5"]["content"].'">
+                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="' . $data["5"]["content"] . '">
                             <input type="hidden" name="id" value="p-1">
                             <input type="hidden" name="index" value="index">
                         </form>';
-                                ?>
+                        ?>
                         <!--<h1>Get a cute teddy bear</h1>-->
                         <!--<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some </p>-->
                         <button>Read More..
@@ -157,8 +160,8 @@ if ($_SESSION['inlog'] == 1) {
 
             </div>
 
-                <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>-->
-                <!--        <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>-->
+                    <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>-->
+                    <!--        <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>-->
 
             <script src="http://code.jquery.com/jquery-latest.min.js"></script>
             <script src="http://unslider.com/unslider.min.js"></script>
