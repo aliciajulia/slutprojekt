@@ -48,7 +48,7 @@ if ($_SESSION['inlog'] == 1) {
                     <ul>
                         <li ><a class="topLeft active" href="adminIndex.php">Homepage</a></li>
                         <li><a href="adminOm.php">About</a></li>
-                        <li><a href="foretagside.html">Business Idea</a>
+                        <li><a href="adminForetagside.php">Business Idea</a>
                             <ul>
                                 <li><a href="adminAterforsaljare.php">Resellers</a></li>
                                 <li><a href="adminUtbud.php">Product Range</a></li>
@@ -84,13 +84,13 @@ if ($_SESSION['inlog'] == 1) {
                         echo '<form method="POST" action="doUpdate.php">
                         <input type="text" name="content" value="' . $data["0"]["content"] . '">
                         <input type="hidden" name="id" value="h1-1">
-                        <input type="hidden" name="index" value="index">
+                        <input type="hidden" name="tabel" value="index">
                     </form>';
 
                         echo '<form method="POST" action="doUpdate.php">
                             <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="' . $data["1"]["content"] . '">
                             <input type="hidden" name="id" value="p-1">
-                            <input type="hidden" name="index" value="index">
+                            <input type="hidden" name="tabel" value="index">
                         </form>';
                         ?>
                         <!--<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some </p>-->
@@ -103,7 +103,7 @@ if ($_SESSION['inlog'] == 1) {
                         echo '<form method="POST" action="doUpdate.php">
                         <input type="text" name="content" value="' . $data["2"]["content"] . '">
                         <input type="hidden" name="id" value="h1-1">
-                        <input type="hidden" name="index" value="index">
+                        <input type="hidden" name="tabel" value="index">
                     </form>';
 
 
@@ -111,7 +111,7 @@ if ($_SESSION['inlog'] == 1) {
                         echo '<form method="POST" action="doUpdate.php">
                             <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="' . $data["3"]["content"] . '">
                             <input type="hidden" name="id" value="p-1">
-                            <input type="hidden" name="index" value="index">
+                            <input type="hidden" name="tabel" value="index">
                         </form>';
                         ?>
                         <!--<h1>Our vison</h1>-->
@@ -124,7 +124,7 @@ if ($_SESSION['inlog'] == 1) {
                         echo '<form method="POST" action="doUpdate.php">
                         <input type="text" name="content" value="' . $data["4"]["content"] . '">
                         <input type="hidden" name="id" value="h1-1">
-                        <input type="hidden" name="index" value="index">
+                        <input type="hidden" name="tabel" value="index">
                     </form>';
 
 
@@ -132,7 +132,7 @@ if ($_SESSION['inlog'] == 1) {
                         echo '<form method="POST" action="doUpdate.php">
                             <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="' . $data["5"]["content"] . '">
                             <input type="hidden" name="id" value="p-1">
-                            <input type="hidden" name="index" value="index">
+                            <input type="hidden" name="tabel" value="index">
                         </form>';
                         ?>
                         <!--<h1>Get a cute teddy bear</h1>-->

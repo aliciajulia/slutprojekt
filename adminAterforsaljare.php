@@ -70,7 +70,7 @@ if ($_SESSION['inlog'] == 1) {
                             echo "<form method='POST' action='doUpdate.php'>
                             <input style='width:180px;' type='text' value='".$data[0][1]."' name='content'> 
                         <input type='hidden' name='id' value='h2-1'>
-                        <input type='hidden' name='aterforsaljare' value='aterforsaljare'>
+                        <input type='hidden' name='tabel' value='aterforsaljare'>
                         <br>
                         <input style='width:180px;' type='text' value='".$data[0][2]."' name='content'>
                             </form>";
@@ -84,7 +84,7 @@ if ($_SESSION['inlog'] == 1) {
                             echo "<form method='POST' action='doUpdate.php'>
                             <input style='width:180px;' type='text' value='".$data[1][1]."' name='content'> 
                         <input type='hidden' name='id' value='h2-2'>
-                        <input type='hidden' name='aterforsaljare' value='aterforsaljare'>
+                        <input type='hidden' name='tabel' value='aterforsaljare'>
                         <br>
                         <input style='width:180px;' type='text' value='".$data[1][2]."' name='content'>
                             </form>";
@@ -98,7 +98,7 @@ if ($_SESSION['inlog'] == 1) {
                             echo "<form method='POST' action='doUpdate.php'>
                             <input style='width:180px;' type='text' value='".$data[2][1]."' name='content'> 
                         <input type='hidden' name='id' value='h2-3'>
-                        <input type='hidden' name='aterforsaljare' value='aterforsaljare'>
+                        <input type='hidden' name='tabel' value='aterforsaljare'>
                         <br>
                         <input style='width:180px;' type='text' value='".$data[2][2]."' name='content'>
                             </form>";
@@ -112,7 +112,7 @@ if ($_SESSION['inlog'] == 1) {
                             echo "<form method='POST' action='doUpdate.php'>
                             <input style='width:180px;' type='text' value='".$data[3][1]."' name='content'> 
                         <input type='hidden' name='id' value='h2-4'>
-                        <input type='hidden' name='aterforsaljare' value='aterforsaljare'>
+                        <input type='hidden' name='tabel' value='aterforsaljare'>
                         <br>
                         <input style='width:180px;' type='text' value='".$data[3][2]."' name='content'> 
                             </form>";
@@ -128,7 +128,7 @@ if ($_SESSION['inlog'] == 1) {
                             echo "<form method='POST' action='doUpdate.php'>
                             <input style='width:180px;' type='text' value='".$data[4][1]."' name='content'> 
                         <input type='hidden' name='id' value='h2-5'>
-                        <input type='hidden' name='aterforsaljare' value='aterforsaljare'>
+                        <input type='hidden' name='tabel' value='aterforsaljare'>
                         <br>
                         <input style='width:180px;' type='text' value='".$data[4][2]."' name='content'>
                             </form>";
@@ -141,7 +141,7 @@ if ($_SESSION['inlog'] == 1) {
                             echo "<form method='POST' action='doUpdate.php'>
                             <input style='width:180px;' type='text' value='".$data[5][1]."' name='content'> 
                         <input type='hidden' name='id' value='h2-6'>
-                        <input type='hidden' name='aterforsaljare' value='aterforsaljare'>
+                        <input type='hidden' name='tabel' value='aterforsaljare'>
                         <br>
                         <input style='width:180px;' type='text' value='".$data[5][2]."' name='content'>
                             </form>";
@@ -154,7 +154,7 @@ if ($_SESSION['inlog'] == 1) {
                             echo "<form method='POST' action='doUpdate.php'>
                             <input style='width:180px;' type='text' value='".$data[6][1]."' name='content'> 
                         <input type='hidden' name='id' value='h2-7'>
-                        <input type='hidden' name='aterforsaljare' value='aterforsaljare'>
+                        <input type='hidden' name='tabel' value='aterforsaljare'>
                         <br>
                         <input style='width:180px;' type='text' value='".$data[6][2]."' name='content'>
                             </form>";
@@ -167,7 +167,7 @@ if ($_SESSION['inlog'] == 1) {
                             echo "<form method='POST' action='doUpdate.php'>
                             <input style='width:180px;' type='text' value='".$data[7][1]."' name='content'> 
                         <input type='hidden' name='id' value='h2-8'>
-                        <input type='hidden' name='aterforsaljare' value='aterforsaljare'>
+                        <input type='hidden' name='tabel' value='aterforsaljare'>
                         <br>
                         <input style='width:180px;' type='text' value='".$data[7][2]."' name='content'>
                             </form>";

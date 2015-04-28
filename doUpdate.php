@@ -7,7 +7,7 @@
 //$dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
 include 'connectDb.php';
 
-$tabel = filter_input(INPUT_POST, 'index', FILTER_SANITIZE_SPECIAL_CHARS);
+$tabel = filter_input(INPUT_POST, 'tabel', FILTER_SANITIZE_SPECIAL_CHARS);
 $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_SPECIAL_CHARS);
 $content = filter_input(INPUT_POST, 'content', FILTER_SANITIZE_SPECIAL_CHARS);
 
