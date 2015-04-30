@@ -3,21 +3,21 @@ include 'connectDb.php';
 
 session_start();
 if ($_SESSION['inlog'] == 1) {
-//var_dump($_SESSION);
-//    hämta hem texter från db för att kunna skriva ut dom i formulären
-    $sql = "SELECT * FROM `kontakt`";
-    $stmt = $dbh->prepare($sql);
-//    $stmt->bindParam(":anvnam", $anvnam);
-//    $stmt->bindParam(":losord", $losord);
-    $stmt->execute();
-    $data = $stmt->fetchAll();
-//    var_dump($data);
+////var_dump($_SESSION);
+////    hämta hem texter från db för att kunna skriva ut dom i formulären
+//    $sql = "SELECT * FROM `kontakt`";
+//    $stmt = $dbh->prepare($sql);
+////    $stmt->bindParam(":anvnam", $anvnam);
+////    $stmt->bindParam(":losord", $losord);
+//    $stmt->execute();
+//    $data = $stmt->fetchAll();
+////    var_dump($data);
     ?>
 
     <!DOCTYPE html>
     <html>
         <head>
-            <title>BearHug - Kontakt</title>
+            <title>BearHug - Admin</title>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width">
             <link rel="stylesheet" href="reset.css">
@@ -28,7 +28,7 @@ if ($_SESSION['inlog'] == 1) {
             <div id="wrapper">
                 <div id="top">  
                     <a href="adminIndex.php"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
-                    <!--<a href="doLogout.php">Logga ut</a>-->
+<!--                    <a href="doLogout.php">Logga ut</a>-->
 
                 </div>
 
@@ -42,11 +42,12 @@ if ($_SESSION['inlog'] == 1) {
                                 <li><a href="adminUtbud.php">Product Range</a></li>
                             </ul>
                         </li>
-                        <li ><a class="topRight active" href="adminKontakt.php">Contact</a></li>
+                        <li ><a href="adminKontakt.php">Contact</a></li>
                     </ul>
                 </div>
 
                 <div id="content">
+                    <h2>Redigera menyalternativen</h2>
                     <?php
                     echo '<form method="POST" action="doUpdate.php">
                         <input type="text" name="content" value="' . $data["0"]["1"] . '">

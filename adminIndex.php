@@ -1,10 +1,4 @@
 <?php
-//define("DB_SERVER", "berzan.hemsida.eu");
-//define("DB_USER", "berzanhe_alicia");
-//define("DB_PASSWORD", "muffinsmamma");
-//define("DB_NAME", "berzanhe_alicia");
-//$dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
-
 include 'connectDb.php';
 
 session_start();
@@ -32,8 +26,8 @@ if ($_SESSION['inlog'] == 1) {
         <body>
             <div id="wrapper">
                 <div id="top"> 
-                    <a href="index.html"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
-                    <a href="doLogout.php">Logga ut</a>
+                    <a href="adminIndex.php"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
+                    <!--<a href="doLogout.php">Logga ut</a>-->
                     <!--<div id="top_logga">-->
 
                     <!--</div>-->
@@ -57,18 +51,6 @@ if ($_SESSION['inlog'] == 1) {
                         <li ><a class="topRight" href="adminKontakt.php">Contact</a></li>
                     </ul>
                 </div>
-                <!--            <br>
-                            <br>
-                            <br>-->
-
-                <!--            <div class="banner">
-                    <ul>
-                        <li>This is a slide.</li>
-                        <li>This is another slide.</li>
-                        <li>This is a final slide.</li>
-                    </ul>
-                </div>-->
-
                 <div class="header">
                     <ul>
                         <li><img src="Bilder/egna/ett.jpg" alt="slideshow"></li>
@@ -142,7 +124,10 @@ if ($_SESSION['inlog'] == 1) {
                     </div>
                     <p> </p>
                 </div>
-                <div id="footer">
+                 <?php
+                include 'footer.php';
+                ?>
+<!--                <div id="footer">
 
                     <p> Bearhug is not a real company. This page was made as a school project.
                         Nothing displayed on this site is true. Hope you liked the website.
@@ -156,12 +141,12 @@ if ($_SESSION['inlog'] == 1) {
                     <div id="logga">
                         <img src="Bilder/egna/BHlogo_2.png" alt="logga">
                     </div>
-                </div>
+                </div>-->
 
             </div>
 
-                    <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>-->
-                    <!--        <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>-->
+                            <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>-->
+                            <!--        <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>-->
 
             <script src="http://code.jquery.com/jquery-latest.min.js"></script>
             <script src="http://unslider.com/unslider.min.js"></script>

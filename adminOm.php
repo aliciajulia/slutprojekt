@@ -35,7 +35,7 @@ if ($_SESSION['inlog'] == 1) {
         <body>
             <div id="wrapper">
                 <div id="top"> 
-                    <a href="index.html"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
+                    <a href="adminIndex.php"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
 
                 </div>
 
@@ -46,10 +46,10 @@ if ($_SESSION['inlog'] == 1) {
                         <li><a href="adminForetagside.php">Business Idea</a>
                             <ul>
                                 <li><a href="aterforsaljare.html">Resellers</a></li>
-                                <li><a href="utbud.html">Product Range</a></li>
+                                <li><a href="adminUtbud.php">Product Range</a></li>
                             </ul>
                         </li>
-                        <li ><a class="topRight" href="kontakt.html">Contact</a></li>
+                        <li ><a class="topRight" href="adminKontakt.php">Contact</a></li>
                     </ul>
                 </div>
                 <div id="content">
@@ -69,14 +69,14 @@ if ($_SESSION['inlog'] == 1) {
                         <!--<br>-->
                         <?php
                         echo "<form method='POST' action='doUpdate.php'>
-                            <input type='text' value='".$data[0][1]."' name='content'> 
+                            <input type='text' value='" . $data[0][1] . "' name='content'> 
                         <input type='hidden' name='id' value='h2-1'>
                         <input type='hidden' name='tabel' value='om'>
                             </form>";
 //                    <h2>CEO - Alicia Broberg</h2>
 //                    <img src = "Bilder/egna/bild-4.JPG" alt = "aliciaBroberg">
                         echo '<form method="POST" action="doUpdate.php">
-                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="'.$data[1][1].'">
+                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="' . $data[1][1] . '">
                             <input type="hidden" name="id" value="p-1">
                             <input type="hidden" name="tabel" value="om">
                         </form>';
@@ -87,14 +87,14 @@ if ($_SESSION['inlog'] == 1) {
                     <div class="colums_om">
                         <?php
                         echo "<form method='POST' action='doUpdate.php'>
-                            <input type='text' value='".$data[2][1]."' name='content'> 
+                            <input type='text' value='" . $data[2][1] . "' name='content'> 
                         <input type='hidden' name='id' value='h2-2'>
                         <input type='hidden' name='tabel' value='om'>
                             </form>";
 //                    <h2>CEO - Alicia Broberg</h2>
 //                    <img src = "Bilder/egna/bild-4.JPG" alt = "aliciaBroberg">
                         echo '<form method="POST" action="doUpdate.php">
-                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="'.$data[3][1].'">
+                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="' . $data[3][1] . '">
                             <input type="hidden" name="id" value="p-2">
                             <input type="hidden" name="tabel" value="om">
                         </form>';
@@ -109,14 +109,14 @@ if ($_SESSION['inlog'] == 1) {
                     <div class="colums_om">
                         <?php
                         echo "<form method='POST' action='doUpdate.php'>
-                            <input type='text' value='".$data[4][1]."' name='content'> 
+                            <input type='text' value='" . $data[4][1] . "' name='content'> 
                         <input type='hidden' name='id' value='h2-3'>
                         <input type='hidden' name='tabel' value='om'>
                             </form>";
 //                    <h2>CEO - Alicia Broberg</h2>
 //                    <img src = "Bilder/egna/bild-4.JPG" alt = "aliciaBroberg">
                         echo '<form method="POST" action="doUpdate.php">
-                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="'.$data[5][1].'">
+                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="' . $data[5][1] . '">
                             <input type="hidden" name="id" value="p-3">
                             <input type="hidden" name="tabel" value="om">
                         </form>';
@@ -132,14 +132,14 @@ if ($_SESSION['inlog'] == 1) {
                     <div class="colums_om">
                         <?php
                         echo "<form method='POST' action='doUpdate.php'>
-                            <input type='text' value='".$data[6][1]."' name='content'> 
+                            <input type='text' value='" . $data[6][1] . "' name='content'> 
                         <input type='hidden' name='id' value='h2-4'>
                         <input type='hidden' name='tabel' value='om'>
                             </form>";
 //                    <h2>CEO - Alicia Broberg</h2>
 //                    <img src = "Bilder/egna/bild-4.JPG" alt = "aliciaBroberg">
                         echo '<form method="POST" action="doUpdate.php">
-                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="'.$data[7][1].'">
+                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="' . $data[7][1] . '">
                             <input type="hidden" name="id" value="p-4">
                             <input type="hidden" name="tabel" value="om">
                         </form>';
@@ -152,20 +152,23 @@ if ($_SESSION['inlog'] == 1) {
                     </div>
                     <p> </p>
                 </div>
-                <div id="footer">
-                    <p> Bearhug is not a real company. This page was made as a school project.
-                        Nothing displayed on this site is true. Hope you liked the website.
-                        All images on this page are taken and edited by Alicia Broberg. <br> Pictures are protected
-                        of the top Copyright Act.</p>
-                    <div id="icons">
-                        <a href="http://www.google.se/"><img src="Bilder/1399910910_RSS.png" alt="icon"></a>
-                        <a href="http://www.facebook.se/"><img src="Bilder/1399910863_Facebook.png" alt="icon"></a>
-                        <a href="http://www.gmail.com/"><img src="Bilder/1399910919_Mail.png" alt="icon"></a>
-                    </div>
-                    <div id="logga">
-                        <img src="Bilder/egna/BHlogo_2.png" alt="logga">
-                    </div>
-                </div>
+                <?php
+                include 'footer.php';
+                ?>
+                <!--                <div id="footer">
+                                    <p> Bearhug is not a real company. This page was made as a school project.
+                                        Nothing displayed on this site is true. Hope you liked the website.
+                                        All images on this page are taken and edited by Alicia Broberg. <br> Pictures are protected
+                                        of the top Copyright Act.</p>
+                                    <div id="icons">
+                                        <a href="http://www.google.se/"><img src="Bilder/1399910910_RSS.png" alt="icon"></a>
+                                        <a href="http://www.facebook.se/"><img src="Bilder/1399910863_Facebook.png" alt="icon"></a>
+                                        <a href="http://www.gmail.com/"><img src="Bilder/1399910919_Mail.png" alt="icon"></a>
+                                    </div>
+                                    <div id="logga">
+                                        <img src="Bilder/egna/BHlogo_2.png" alt="logga">
+                                    </div>
+                                </div>-->
             </div>
         </body>
     </html>
