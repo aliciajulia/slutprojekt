@@ -2,6 +2,7 @@
 include 'connectDb.php';
 
 session_start();
+var_dump($_SESSION);
 if ($_SESSION['inlog'] == 1) {
 //var_dump($_SESSION);
 //    hämta hem texter från db för att kunna skriva ut dom i formulären

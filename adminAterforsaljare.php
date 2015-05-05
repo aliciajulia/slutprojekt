@@ -42,7 +42,7 @@ if ($_SESSION['inlog'] == 1) {
 
                 <div id="nav">
                     <ul>
-                        <li ><a class="topLeft" href="adimIndex.php">Homepage</a></li>
+                        <li ><a class="topLeft" href="adminIndex.php">Homepage</a></li>
                         <li><a  href="adminOm.php">About</a></li>
                         <li><a href="adminForetagside.php">Business Idea</a>
                             <ul>
@@ -72,7 +72,7 @@ if ($_SESSION['inlog'] == 1) {
                         <input type='hidden' name='id' value='h2-1'>
                         <input type='hidden' name='tabel' value='aterforsaljare'>
                         <br>
-                        <input style='width:180px;' type='text' value='" . $data[0][2] . "' name='content'>
+                        <input style='width:180px;' type='text' value='" . $data[0][2] . "' name='link'>
                             </form>";
                             ?>
                         </div>
@@ -86,7 +86,7 @@ if ($_SESSION['inlog'] == 1) {
                         <input type='hidden' name='id' value='h2-2'>
                         <input type='hidden' name='tabel' value='aterforsaljare'>
                         <br>
-                        <input style='width:180px;' type='text' value='" . $data[1][2] . "' name='content'>
+                        <input style='width:180px;' type='text' value='" . $data[1][2] . "' name='link'>
                             </form>";
                             ?>
                         </div>
@@ -100,7 +100,7 @@ if ($_SESSION['inlog'] == 1) {
                         <input type='hidden' name='id' value='h2-3'>
                         <input type='hidden' name='tabel' value='aterforsaljare'>
                         <br>
-                        <input style='width:180px;' type='text' value='" . $data[2][2] . "' name='content'>
+                        <input style='width:180px;' type='text' value='" . $data[2][2] . "' name='link'>
                             </form>";
                             ?>
                         </div>
@@ -114,7 +114,7 @@ if ($_SESSION['inlog'] == 1) {
                         <input type='hidden' name='id' value='h2-4'>
                         <input type='hidden' name='tabel' value='aterforsaljare'>
                         <br>
-                        <input style='width:180px;' type='text' value='" . $data[3][2] . "' name='content'> 
+                        <input style='width:180px;' type='text' value='" . $data[3][2] . "' name='link'> 
                             </form>";
                             ?></div>
                         <!--                    <h2>IKEA</h2><h2>ICA Supermarket</h2><h2>Stadium</h2>-->
@@ -130,7 +130,7 @@ if ($_SESSION['inlog'] == 1) {
                         <input type='hidden' name='id' value='h2-5'>
                         <input type='hidden' name='tabel' value='aterforsaljare'>
                         <br>
-                        <input style='width:180px;' type='text' value='" . $data[4][2] . "' name='content'>
+                        <input style='width:180px;' type='text' value='" . $data[4][2] . "' name='link'>
                             </form>";
                             ?></div>
                         <div class="aterforsaljare">
@@ -143,7 +143,7 @@ if ($_SESSION['inlog'] == 1) {
                         <input type='hidden' name='id' value='h2-6'>
                         <input type='hidden' name='tabel' value='aterforsaljare'>
                         <br>
-                        <input style='width:180px;' type='text' value='" . $data[5][2] . "' name='content'>
+                        <input style='width:180px;' type='text' value='" . $data[5][2] . "' name='link'>
                             </form>";
                             ?></div>
                         <div class="aterforsaljare">
@@ -156,7 +156,7 @@ if ($_SESSION['inlog'] == 1) {
                         <input type='hidden' name='id' value='h2-7'>
                         <input type='hidden' name='tabel' value='aterforsaljare'>
                         <br>
-                        <input style='width:180px;' type='text' value='" . $data[6][2] . "' name='content'>
+                        <input style='width:180px;' type='text' value='" . $data[6][2] . "' name='link'>
                             </form>";
                             ?></div>
                         <div class="aterforsaljare">
@@ -169,7 +169,7 @@ if ($_SESSION['inlog'] == 1) {
                         <input type='hidden' name='id' value='h2-8'>
                         <input type='hidden' name='tabel' value='aterforsaljare'>
                         <br>
-                        <input style='width:180px;' type='text' value='" . $data[7][2] . "' name='content'>
+                        <input style='width:180px;' type='text' value='" . $data[7][2] . "' name='link'>
                             </form>";
                             ?>
                         </div>
@@ -180,21 +180,6 @@ if ($_SESSION['inlog'] == 1) {
                 <?php
                 include 'footer.php';
                 ?>
-                <!--                <div id="footer">
-                    
-                                        <p> Bearhug is not a real company. This page was made as a school project.
-                                            Nothing displayed on this site is true. Hope you liked the website.
-                                            All images on this page are taken and edited by Alicia Broberg. <br> Pictures are protected
-                                            of the top Copyright Act.</p>
-                                        <div id="icons">
-                                            <a href="http://www.google.se/"><img src="Bilder/1399910910_RSS.png" alt="icon"></a>
-                                            <a href="http://www.facebook.se/"><img src="Bilder/1399910863_Facebook.png" alt="icon"></a>
-                                            <a href="http://www.gmail.com/"><img src="Bilder/1399910919_Mail.png" alt="icon"></a>
-                                        </div>
-                                        <div id="logga">
-                                            <img src="Bilder/egna/BHlogo_2.png" alt="logga">
-                                        </div>
-                                    </div>-->
             </div>
         </body>
     </html>
