@@ -5,13 +5,21 @@ session_start();
 if ($_SESSION['inlog'] == 1) {
 ////var_dump($_SESSION);
 ////    hämta hem texter från db för att kunna skriva ut dom i formulären
-//    $sql = "SELECT * FROM `kontakt`";
-//    $stmt = $dbh->prepare($sql);
-////    $stmt->bindParam(":anvnam", $anvnam);
-////    $stmt->bindParam(":losord", $losord);
-//    $stmt->execute();
-//    $data = $stmt->fetchAll();
-////    var_dump($data);
+    $sql = "SELECT * FROM `info`";
+    $stmt = $dbh->prepare($sql);
+//    $stmt->bindParam(":anvnam", $anvnam);
+//    $stmt->bindParam(":losord", $losord);
+    $stmt->execute();
+    $data = $stmt->fetchAll();
+//    var_dump($data);
+
+    $sql = "SELECT * FROM `index`";
+    $stmt = $dbh->prepare($sql);
+//    $stmt->bindParam(":anvnam", $anvnam);
+//    $stmt->bindParam(":losord", $losord);
+    $stmt->execute();
+    $dataImg = $stmt->fetchAll();
+//    var_dump($dataImg);
     ?>
 
     <!DOCTYPE html>
@@ -34,52 +42,92 @@ if ($_SESSION['inlog'] == 1) {
 
                 <div id="nav">
                     <ul>
-                        <li ><a class="topLeft" href="adminIndex.php">Homepage</a></li>
-                        <li><a href="adminOm.php">About</a></li>
-                        <li><a href="adminForetagside.php">Business Idea</a>
+                        <li ><a class="topLeft" href="adminIndex.php"><?php echo $data[1][1] ?></a></li>
+                        <li><a href="adminOm.php"><?php echo $data[2][1] ?></a></li>
+                        <li><a href="adminForetagside.php"><?php echo $data[3][1] ?></a>
                             <ul>
-                                <li><a href="adminAterforsaljare.php">Resellers</a></li>
-                                <li><a href="adminUtbud.php">Product Range</a></li>
+                                <li><a href="adminAterforsaljare.php"><?php echo $data[4][1] ?></a></li>
+                                <li><a href="adminUtbud.php"><?php echo $data[5][1] ?></a></li>
                             </ul>
                         </li>
-                        <li ><a href="adminKontakt.php">Contact</a></li>
+                        <li ><a href="adminKontakt.php"><?php echo $data[6][1] ?></a></li>
                     </ul>
                 </div>
-<?php // " . $data[0][1] . "?>
+
                 <div id="content">
+                    <br>
+                    <br>
                     <h2>Redigera menyalternativen</h2>
 
                     <form method='POST' action='doUpdate.php'>
-                        <input style='width:180px;' type='text' value='meny1' name='content'> 
+                        <input style='width:180px;' type='text' value='<?php echo $data[1][1] ?> ' name='content'> 
                         <input type='hidden' name='id' value='meny1'>
-                        <input type='hidden' name='tabel' value='admin'>
+                        <input type='hidden' name='tabel' value='info'>
                     </form>
                     <form method='POST' action='doUpdate.php'>
-                        <input style='width:180px;' type='text' value='meny2' name='content'> 
+                        <input style='width:180px;' type='text' value='<?php echo $data[2][1] ?>' name='content'> 
                         <input type='hidden' name='id' value='meny2'>
-                        <input type='hidden' name='tabel' value='admin'>
+                        <input type='hidden' name='tabel' value='info'>
                     </form>
                     <form method='POST' action='doUpdate.php'>
-                        <input style='width:180px;' type='text' value='meny3' name='content'> 
+                        <input style='width:180px;' type='text' value='<?php echo $data["3"]["1"] ?> ' name='content'> 
                         <input type='hidden' name='id' value='meny3'>
-                        <input type='hidden' name='tabel' value='admin'>
+                        <input type='hidden' name='tabel' value='info'>
                     </form>
                     <form method='POST' action='doUpdate.php'>
-                        <input style='width:180px;' type='text' value='meny4' name='content'> 
+                        <input style='width:180px;' type='text' value='<?php echo $data["4"]["1"] ?> ' name='content'> 
                         <input type='hidden' name='id' value='meny4'>
-                        <input type='hidden' name='tabel' value='admin'>
+                        <input type='hidden' name='tabel' value='info'>
                     </form>
                     <form method='POST' action='doUpdate.php'>
-                        <input style='width:180px;' type='text' value='meny5' name='content'> 
+                        <input style='width:180px;' type='text' value='<?php echo $data["5"]["1"] ?> ' name='content'> 
                         <input type='hidden' name='id' value='meny5'>
-                        <input type='hidden' name='tabel' value='admin'>
+                        <input type='hidden' name='tabel' value='info'>
                     </form>
                     <form method='POST' action='doUpdate.php'>
-                        <input style='width:180px;' type='text' value='meny6' name='content'> 
+                        <input style='width:180px;' type='text' value='<?php echo$data["6"]["1"] ?> ' name='content'> 
                         <input type='hidden' name='id' value='meny6'>
-                        <input type='hidden' name='tabel' value='admin'>
+                        <input type='hidden' name='tabel' value='info'>
                     </form>
-                    
+
+
+                    <br>
+                    <br>
+                    <h2>Redigera bilder i slidern</h2>
+                    Bild 1
+                    <form method='POST' action='doUpdate.php'>
+                        <input style='width:180px;' type='text' value='<?php echo $dataImg[3][1] ?> ' name='content'> 
+                        <input type='hidden' name='id' value='meny1'>
+                        <input type='hidden' name='tabel' value='info'>
+                    </form>
+                    Bild 2
+                    <form method='POST' action='doUpdate.php'>
+                        <input style='width:180px;' type='text' value='<?php echo $dataImg[4][1] ?>' name='content'> 
+                        <input type='hidden' name='id' value='meny2'>
+                        <input type='hidden' name='tabel' value='info'>
+                    </form>
+                    Bild 3
+                    <form method='POST' action='doUpdate.php'>
+                        <input style='width:180px;' type='text' value='<?php echo $dataImg["5"]["1"] ?> ' name='content'> 
+                        <input type='hidden' name='id' value='meny3'>
+                        <input type='hidden' name='tabel' value='info'>
+                    </form>
+                    Bild 4
+                    <form method='POST' action='doUpdate.php'>
+                        <input style='width:180px;' type='text' value='<?php echo $dataImg["6"]["1"] ?> ' name='content'> 
+                        <input type='hidden' name='id' value='meny4'>
+                        <input type='hidden' name='tabel' value='info'>
+                    </form>
+                    <br>
+                    <br>
+                    <h2>Redigera loggan</h2>
+                    <form method='POST' action='doUpdate.php'>
+                        <input style='width:180px;' type='text' value='<?php echo $data[0][1] ?> ' name='content'> 
+                        <input type='hidden' name='id' value='logo'>
+                        <input type='hidden' name='tabel' value='info'>
+                    </form>
+                    <br>
+                    <br>
 
                 </div>
                 <?php

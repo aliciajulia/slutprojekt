@@ -12,6 +12,13 @@ if ($_SESSION['inlog'] == 1) {
     $stmt->execute();
     $data = $stmt->fetchAll();
 //    var_dump($data);
+
+    $sql = "SELECT * FROM `info`";
+    $stmt = $dbh->prepare($sql);
+//    $stmt->bindParam(":anvnam", $anvnam);
+//    $stmt->bindParam(":losord", $losord);
+    $stmt->execute();
+    $dataInfo = $stmt->fetchAll();
     ?>
     <!DOCTYPE html>
     <html>
@@ -33,15 +40,15 @@ if ($_SESSION['inlog'] == 1) {
 
                 <div id="nav">
                     <ul>
-                        <li ><a class="topLeft" href="adminIndex.php">Homepage</a></li>
-                        <li><a href="adminOm.php">About</a></li>
-                        <li><a href="adminForetagside.php">Business Idea</a>
+                        <li ><a class="topLeft" href="adminIndex.php"><?php echo $dataInfo[1][1] ?></a></li>
+                        <li><a href="adminOm.php"><?php echo $dataInfo[2][1] ?></a></li>
+                        <li><a href="adminForetagside.php"><?php echo $dataInfo[3][1] ?></a>
                             <ul>
-                                <li><a href="adminAterforsaljare.php">Resellers</a></li>
-                                <li><a class="active" href="adminUtbud.php">Product Range</a></li>
+                                <li><a href="adminAterforsaljare.php"><?php echo $dataInfo[4][1] ?></a></li>
+                                <li><a class="active" href="adminUtbud.php"><?php echo $dataInfo[5][1] ?></a></li>
                             </ul>
                         </li>
-                        <li ><a class="topRight" href="adminKontakt.php">Contact</a></li>
+                        <li ><a class="topRight" href="adminKontakt.php"><?php echo $dataInfo[6][1] ?></a></li>
                     </ul>
                 </div>
 

@@ -2,7 +2,7 @@
 include 'connectDb.php';
 
 session_start();
-var_dump($_SESSION);
+//var_dump($_SESSION);
 if ($_SESSION['inlog'] == 1) {
 //var_dump($_SESSION);
 //    hämta hem texter från db för att kunna skriva ut dom i formulären
@@ -13,6 +13,13 @@ if ($_SESSION['inlog'] == 1) {
     $stmt->execute();
     $data = $stmt->fetchAll();
 //    var_dump($data["0"]["content"]);
+    
+         $sql = "SELECT * FROM `info`";
+    $stmt = $dbh->prepare($sql);
+//    $stmt->bindParam(":anvnam", $anvnam);
+//    $stmt->bindParam(":losord", $losord);
+    $stmt->execute();
+    $dataInfo = $stmt->fetchAll();
     ?>
     <!DOCTYPE html>
     <html>
@@ -28,28 +35,19 @@ if ($_SESSION['inlog'] == 1) {
             <div id="wrapper">
                 <div id="top"> 
                     <a href="adminIndex.php"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
-                    <!--<a href="doLogout.php">Logga ut</a>-->
-                    <!--<div id="top_logga">-->
-
-                    <!--</div>-->
-                    <!--                <div id="top_lankar">
-                                        
-                                       <a href="www.google.se">Skapa konto</a>
-                                        </div>-->
-
                 </div>
 
                 <div id="nav">
                     <ul>
-                        <li ><a class="topLeft active" href="adminIndex.php">Homepage</a></li>
-                        <li><a href="adminOm.php">About</a></li>
-                        <li><a href="adminForetagside.php">Business Idea</a>
+                        <li ><a class="topLeft active" href="adminIndex.php"><?php echo $dataInfo[1][1] ?></a></li>
+                        <li><a href="adminOm.php"><?php echo $dataInfo[2][1] ?></a></li>
+                        <li><a href="adminForetagside.php"><?php echo $dataInfo[3][1] ?></a>
                             <ul>
-                                <li><a href="adminAterforsaljare.php">Resellers</a></li>
-                                <li><a href="adminUtbud.php">Product Range</a></li>
+                                <li><a href="adminAterforsaljare.php"><?php echo $dataInfo[4][1] ?></a></li>
+                                <li><a href="adminUtbud.php"><?php echo $dataInfo[5][1] ?></a></li>
                             </ul>
                         </li>
-                        <li ><a class="topRight" href="adminKontakt.php">Contact</a></li>
+                        <li ><a class="topRight" href="adminKontakt.php"><?php echo $dataInfo[6][1] ?></a></li>
                     </ul>
                 </div>
                 <div class="header">
@@ -128,26 +126,8 @@ if ($_SESSION['inlog'] == 1) {
                  <?php
                 include 'footer.php';
                 ?>
-<!--                <div id="footer">
-
-                    <p> Bearhug is not a real company. This page was made as a school project.
-                        Nothing displayed on this site is true. Hope you liked the website.
-                        All images on this page are taken and edited by Alicia Broberg. <br> Pictures are protected
-                        of the top Copyright Act.</p>
-                    <div id="icons">
-                        <a href="http://www.google.se/"><img src="Bilder/1399910910_RSS.png" alt="icon"></a>
-                        <a href="http://www.facebook.se/"><img src="Bilder/1399910863_Facebook.png" alt="icon"></a>
-                        <a href="http://www.gmail.com/"><img src="Bilder/1399910919_Mail.png" alt="icon"></a>
-                    </div>
-                    <div id="logga">
-                        <img src="Bilder/egna/BHlogo_2.png" alt="logga">
-                    </div>
-                </div>-->
 
             </div>
-
-                            <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>-->
-                            <!--        <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>-->
 
             <script src="http://code.jquery.com/jquery-latest.min.js"></script>
             <script src="http://unslider.com/unslider.min.js"></script>

@@ -6,6 +6,8 @@ $stmt = $dbh->prepare($sql);
 $stmt->execute();
 $footerData = $stmt->fetchAll();
 //    var_dump($data["0"]["content"]);
+
+
 ?>
 <div id="footer">
     <?php
@@ -15,12 +17,9 @@ $footerData = $stmt->fetchAll();
                         <input type="hidden" name="tabel" value="kontakt">
                     </form>';
     ?>
-<!--    <p> Bearhug is not a real company. This page was made as a school project.
-        Nothing displayed on this site is true. Hope you liked the website.
-        All images on this page are taken and edited by Alicia Broberg. <br> Pictures are protected
-        of the top Copyright Act.</p>-->
-    <button><a href="adminInfo.php">Admin</a></button>
-    <button><a href="doLogout.php">Logga ut</a></button>
+
+    <a href="adminInfo.php"><button>Admin</button></a>
+    <a href="doLogout.php"><button>Logga ut</button></a>
     
     <div id="icons">
         <a href="http://www.google.se/"><img src="Bilder/1399910910_RSS.png" alt="icon"></a>
