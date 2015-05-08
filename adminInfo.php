@@ -131,7 +131,7 @@ if ($_SESSION['inlog'] == 1) {
 
                 </div>
                 <?php
-                include 'footer.php';
+                include 'adminFooter.php';
                 ?>
             </div>
         </body>

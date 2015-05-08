@@ -1,13 +1,14 @@
-<?php 
+<?php
 include 'connectDb.php';
 
-    $sql = "SELECT * FROM `info`";
-    $stmt = $dbh->prepare($sql);
+$sql = "SELECT * FROM `info`";
+$stmt = $dbh->prepare($sql);
 //    $stmt->bindParam(":anvnam", $anvnam);
 //    $stmt->bindParam(":losord", $losord);
-    $stmt->execute();
-    $dataInfo = $stmt->fetchAll();
-    ?>
+$stmt->execute();
+$dataInfo = $stmt->fetchAll();
+//    var_dump($dataInfo);
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,7 +22,7 @@ include 'connectDb.php';
     <body>
         <div id="wrapper">
             <div id="top"> 
-                <a href="index.html"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
+                <a href="index.php"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
                 <a href="www.google.se">Logga in</a>
             </div>
 
@@ -47,44 +48,47 @@ include 'connectDb.php';
                 <br>
                 <div class="colums_om">
                     <h2>CEO - Alicia Broberg</h2>
-                    <img src="Bilder/egna/bild-4.JPG" alt="aliciaBroberg">
+                    <img src="Bilder/egna/bild 4.JPG" alt="aliciaBroberg">
                     <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
                 </div>
 
                 <div class="colums_om">
                     <h2>Economy Director - Rebecka Ekström</h2>
-                    <img src="Bilder/egna/bild-3.JPG" alt="rebeckaEkström">
+                    <img src="Bilder/egna/bild 3.JPG" alt="rebeckaEkström">
                     <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
                 </div>
 
                 <div class="colums_om">
                     <h2>PR Director - Lovisa Schenning</h2>
-                    <img src="Bilder/egna/bild-2.JPG" alt="lovisaSchenning">
+                    <img src="Bilder/egna/bild 2.JPG" alt="lovisaSchenning">
                     <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
                 </div>
 
 
                 <div class="colums_om">
                     <h2>Market Manager - Martin Benno Klevbrand</h2>
-                    <img src="Bilder/egna/bild-1.JPG" alt="martinBenno">
+                    <img src="Bilder/egna/bild 1.JPG" alt="martinBenno">
                     <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
                 </div>
                 <p> </p>
             </div>
-            <div id="footer">
-                <p> Bearhug is not a real company. This page was made as a school project.
-                    Nothing displayed on this site is true. Hope you liked the website.
-                    All images on this page are taken and edited by Alicia Broberg. <br> Pictures are protected
-                    of the top Copyright Act.</p>
-                <div id="icons">
-                    <a href="http://www.google.se/"><img src="Bilder/1399910910_RSS.png" alt="icon"></a>
-                    <a href="http://www.facebook.se/"><img src="Bilder/1399910863_Facebook.png" alt="icon"></a>
-                    <a href="http://www.gmail.com/"><img src="Bilder/1399910919_Mail.png" alt="icon"></a>
-                </div>
-                <div id="logga">
-                    <img src="Bilder/egna/BHlogo_2.png" alt="logga">
-                </div>
-            </div>
+            <?php
+            include 'footer.php';
+            ?>
+            <!--            <div id="footer">
+                            <p> Bearhug is not a real company. This page was made as a school project.
+                                Nothing displayed on this site is true. Hope you liked the website.
+                                All images on this page are taken and edited by Alicia Broberg. <br> Pictures are protected
+                                of the top Copyright Act.</p>
+                            <div id="icons">
+                                <a href="http://www.google.se/"><img src="Bilder/1399910910_RSS.png" alt="icon"></a>
+                                <a href="http://www.facebook.se/"><img src="Bilder/1399910863_Facebook.png" alt="icon"></a>
+                                <a href="http://www.gmail.com/"><img src="Bilder/1399910919_Mail.png" alt="icon"></a>
+                            </div>
+                            <div id="logga">
+                                <img src="Bilder/egna/BHlogo_2.png" alt="logga">
+                            </div>
+                        </div>-->
         </div>
     </body>
 </html>

@@ -81,7 +81,7 @@ if ($_SESSION['inlog'] == 1) {
                     <img id="loggaWSPA" src="Bilder/rsz_1logo_wspa_oranje.jpg" alt="wspa">
                 </div>
                 <?php
-                include 'footer.php';
+                include 'adminFooter.php';
                 ?>
                 <!--                <div id="footer">
                                         <p> Bearhug is not a real company. This page was made as a school project.

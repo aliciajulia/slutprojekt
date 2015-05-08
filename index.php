@@ -1,12 +1,15 @@
 <?php
 include 'connectDb.php';
 
-    $sql = "SELECT * FROM `info`";
-    $stmt = $dbh->prepare($sql);
-//    $stmt->bindParam(":anvnam", $anvnam);
-//    $stmt->bindParam(":losord", $losord);
-    $stmt->execute();
-    $dataInfo = $stmt->fetchAll();
+$sql = "SELECT * FROM `index`";
+$stmt = $dbh->prepare($sql);
+$stmt->execute();
+$data = $stmt->fetchAll();
+
+$sql = "SELECT * FROM `info`";
+$stmt = $dbh->prepare($sql);
+$stmt->execute();
+$dataInfo = $stmt->fetchAll();
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,41 +52,44 @@ include 'connectDb.php';
 
             <div id="content">
                 <div class="index_tre">
-                    <h1>Be a part of us</h1>
-                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some </p>
+                    <h1><?php echo $data[0][1] ?></h1>
+                    <p><?php echo $data[7][1] ?></p>
                     <button>Read More..
                     </button>
 
                 </div>
                 <div class="index_tre">
-                    <h1>Our vison</h1>
-                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some </p>
+                    <h1><?php echo $data[1][1] ?></h1>
+                    <p><?php echo $data[8][1] ?></p>
                     <button>Read More..
                     </button>
                 </div>
                 <div class="index_tre">
-                    <h1>Get a cute teddy bear</h1>
-                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some </p>
+                    <h1><?php echo $data[2][1] ?></h1>
+                    <p><?php echo $data[9][1] ?></p>
                     <button>Read More..
                     </button>
                 </div>
                 <p> </p>
             </div>
-            <div id="footer">
-
-                <p> Bearhug is not a real company. This page was made as a school project.
-                    Nothing displayed on this site is true. Hope you liked the website.
-                    All images on this page are taken and edited by Alicia Broberg. <br> Pictures are protected
-                    of the top Copyright Act.</p>
-                <div id="icons">
-                    <a href="http://www.google.se/"><img src="Bilder/1399910910_RSS.png" alt="icon"></a>
-                    <a href="http://www.facebook.se/"><img src="Bilder/1399910863_Facebook.png" alt="icon"></a>
-                    <a href="http://www.gmail.com/"><img src="Bilder/1399910919_Mail.png" alt="icon"></a>
-                </div>
-                <div id="logga">
-                    <img src="Bilder/egna/BHlogo_2.png" alt="logga">
-                </div>
-            </div>
+            <?php
+            include 'footer.php';
+            ?>
+            <!--            <div id="footer">
+            
+                            <p> Bearhug is not a real company. This page was made as a school project.
+                                Nothing displayed on this site is true. Hope you liked the website.
+                                All images on this page are taken and edited by Alicia Broberg. <br> Pictures are protected
+                                of the top Copyright Act.</p>
+                            <div id="icons">
+                                <a href="http://www.google.se/"><img src="Bilder/1399910910_RSS.png" alt="icon"></a>
+                                <a href="http://www.facebook.se/"><img src="Bilder/1399910863_Facebook.png" alt="icon"></a>
+                                <a href="http://www.gmail.com/"><img src="Bilder/1399910919_Mail.png" alt="icon"></a>
+                            </div>
+                            <div id="logga">
+                                <img src="Bilder/egna/BHlogo_2.png" alt="logga">
+                            </div>
+                        </div>-->
 
         </div>
 

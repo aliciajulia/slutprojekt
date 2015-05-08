@@ -193,27 +193,11 @@ if ($_SESSION['inlog'] == 1) {
 
                         </div>
                     </div>
-                    <!--            </div>-->
                     <br><br><br><br>
                 </div>
                 <?php
-                include 'footer.php';
+                include 'adminFooter.php';
                 ?>
-                <!--                <div id="footer">
-                                    <p> Bearhug is not a real company. This page was made as a school project.
-                                        Nothing displayed on this site is true. Hope you liked the website.
-                                        All images on this page are taken and edited by Alicia Broberg. <br> Pictures are protected
-                                        of the top Copyright Act.</p>
-                                    <div id="icons">
-                                        <a href="http://www.google.se/"><img src="Bilder/1399910910_RSS.png" alt="icon"></a>
-                                        <a href="http://www.facebook.se/"><img src="Bilder/1399910863_Facebook.png" alt="icon"></a>
-                                        <a href="http://www.gmail.com/"><img src="Bilder/1399910919_Mail.png" alt="icon"></a>
-                                    </div>
-                                    <div id="logga">
-                                        <img src="Bilder/egna/BHlogo_2.png" alt="logga">
-                                    </div>
-                                </div>-->
-
             </div>
 
             <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>

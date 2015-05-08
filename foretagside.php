@@ -1,10 +1,10 @@
 <?php
 include 'connectDb.php';
 
-    $sql = "SELECT * FROM `info`";
-    $stmt = $dbh->prepare($sql);
-    $stmt->execute();
-    $dataInfo = $stmt->fetchAll();
+$sql = "SELECT * FROM `info`";
+$stmt = $dbh->prepare($sql);
+$stmt->execute();
+$dataInfo = $stmt->fetchAll();
 ?>
 <!DOCTYPE html>
 <html>
@@ -50,20 +50,23 @@ include 'connectDb.php';
 
                 <img id="loggaWSPA" src="Bilder/rsz_1logo_wspa_oranje.jpg" alt="wspa">
             </div>
-            <div id="footer">
-                <p> Bearhug is not a real company. This page was made as a school project.
-                    Nothing displayed on this site is true. Hope you liked the website.
-                    All images on this page are taken and edited by Alicia Broberg. <br> Pictures are protected
-                    of the top Copyright Act.</p>
-                <div id="icons">
-                    <a href="http://www.google.se/"><img src="Bilder/1399910910_RSS.png" alt="icon"></a>
-                    <a href="http://www.facebook.se/"><img src="Bilder/1399910863_Facebook.png" alt="icon"></a>
-                    <a href="http://www.gmail.com/"><img src="Bilder/1399910919_Mail.png" alt="icon"></a>
-                </div>
-                <div id="logga">
-                    <img src="Bilder/egna/BHlogo_2.png" alt="logga">
-                </div>
-            </div>
+            <?php
+            include 'footer.php';
+            ?>
+            <!--            <div id="footer">
+                            <p> Bearhug is not a real company. This page was made as a school project.
+                                Nothing displayed on this site is true. Hope you liked the website.
+                                All images on this page are taken and edited by Alicia Broberg. <br> Pictures are protected
+                                of the top Copyright Act.</p>
+                            <div id="icons">
+                                <a href="http://www.google.se/"><img src="Bilder/1399910910_RSS.png" alt="icon"></a>
+                                <a href="http://www.facebook.se/"><img src="Bilder/1399910863_Facebook.png" alt="icon"></a>
+                                <a href="http://www.gmail.com/"><img src="Bilder/1399910919_Mail.png" alt="icon"></a>
+                            </div>
+                            <div id="logga">
+                                <img src="Bilder/egna/BHlogo_2.png" alt="logga">
+                            </div>
+                        </div>-->
         </div>
     </body>
 </html>

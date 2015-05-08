@@ -12,9 +12,9 @@ if ($_SESSION['inlog'] == 1) {
 //    $stmt->bindParam(":losord", $losord);
     $stmt->execute();
     $data = $stmt->fetchAll();
-//    var_dump($data["0"]["content"]);
-    
-         $sql = "SELECT * FROM `info`";
+//    var_dump($data);
+
+    $sql = "SELECT * FROM `info`";
     $stmt = $dbh->prepare($sql);
 //    $stmt->bindParam(":anvnam", $anvnam);
 //    $stmt->bindParam(":losord", $losord);
@@ -69,7 +69,7 @@ if ($_SESSION['inlog'] == 1) {
                     </form>';
 
                         echo '<form method="POST" action="doUpdate.php">
-                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="' . $data["1"]["content"] . '">
+                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="' . $data["7"]["content"] . '">
                             <input type="hidden" name="id" value="p-1">
                             <input type="hidden" name="tabel" value="index">
                         </form>';
@@ -82,7 +82,7 @@ if ($_SESSION['inlog'] == 1) {
                     <div class="index_tre">
                         <?php
                         echo '<form method="POST" action="doUpdate.php">
-                        <input type="text" name="content" value="' . $data["2"]["content"] . '">
+                        <input type="text" name="content" value="' . $data["1"]["content"] . '">
                         <input type="hidden" name="id" value="h1-1">
                         <input type="hidden" name="tabel" value="index">
                     </form>';
@@ -90,7 +90,7 @@ if ($_SESSION['inlog'] == 1) {
 
 
                         echo '<form method="POST" action="doUpdate.php">
-                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="' . $data["3"]["content"] . '">
+                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="' . $data["8"]["content"] . '">
                             <input type="hidden" name="id" value="p-1">
                             <input type="hidden" name="tabel" value="index">
                         </form>';
@@ -103,7 +103,7 @@ if ($_SESSION['inlog'] == 1) {
                     <div class="index_tre">
                         <?php
                         echo '<form method="POST" action="doUpdate.php">
-                        <input type="text" name="content" value="' . $data["4"]["content"] . '">
+                        <input type="text" name="content" value="' . $data["2"]["content"] . '">
                         <input type="hidden" name="id" value="h1-1">
                         <input type="hidden" name="tabel" value="index">
                     </form>';
@@ -111,7 +111,7 @@ if ($_SESSION['inlog'] == 1) {
 
 
                         echo '<form method="POST" action="doUpdate.php">
-                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="' . $data["5"]["content"] . '">
+                            <input type="text" style="width:300px; height:270px;" rows="17" cols="40" name="content" value="' . $data["9"]["content"] . '">
                             <input type="hidden" name="id" value="p-1">
                             <input type="hidden" name="tabel" value="index">
                         </form>';
@@ -123,8 +123,8 @@ if ($_SESSION['inlog'] == 1) {
                     </div>
                     <p> </p>
                 </div>
-                 <?php
-                include 'footer.php';
+                <?php
+                include 'adminFooter.php';
                 ?>
 
             </div>

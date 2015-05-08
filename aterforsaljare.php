@@ -27,7 +27,7 @@ var_dump($data[1][3]);
     <body>
         <div id="wrapper">
             <div id="top">  
-                <a href="index.html"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
+                <a href="index.php"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
                 <a href="www.google.se">Logga in</a>
             </div>
 
@@ -53,7 +53,7 @@ var_dump($data[1][3]);
                 <br>
                 <h2>På förjande ställen finns våra varor att inhandla.</h2>
                 <div id="aterforsaljare1">
-                    <div class="aterforsaljare"> <a href="http://www.ahlens.se/"><img src="<?php $data[0][3] ?>" alt="återförsäljare" ><h2>Åhléns</h2></a> </div>
+                    <div class="aterforsaljare"> <a href="http://www.ahlens.se/"><img src="<?php echo $data[0][3] ?>" alt="återförsäljare" ><h2>Åhléns</h2></a> </div>
                     <div class="aterforsaljare"><a href="http://www.ikea.se/"><img src="Bilder/rsz_ikea-logo.jpg" alt="återförsäljare"><h2>IKEA</h2></a></div>
                     <div class="aterforsaljare"><a href="http://www.ica.se/"><img src="Bilder/rsz_logo_supermarket0512.gif" alt="återförsäljare"><h2>ICA</h2></a></div>
                     <div class="aterforsaljare"><a href="http://www.stadium.se/"><img src="Bilder/rsz_stadium_logo.jpg" alt="återförsäljare"><h2>Stadium</h2></a></div>
@@ -68,8 +68,10 @@ var_dump($data[1][3]);
                 </div>
             </div>
 
-
-            <div id="footer">
+ <?php
+            include 'footer.php';
+            ?>
+<!--            <div id="footer">
 
                 <p> Bearhug is not a real company. This page was made as a school project.
                     Nothing displayed on this site is true. Hope you liked the website.
@@ -83,7 +85,7 @@ var_dump($data[1][3]);
                 <div id="logga">
                     <img src="Bilder/egna/BHlogo_2.png" alt="logga">
                 </div>
-            </div>
+            </div>-->
         </div>
     </body>
 </html>
