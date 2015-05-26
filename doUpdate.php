@@ -12,21 +12,18 @@ $sqlContent = "";
 $sqlLink = "";
 $sqlImg = "";
 
-
 if (!empty($content)) {
     $sqlContent = '`content`="' . $content . '"';
 }
 if (!empty($link)) {
-    $sqlLink = '`link`="' . $link . '"';
+    $sqlLink = '`link`=""' . $link . '""';
 }
 if (!empty($img)) {
-    $sqlImg = '`img`="' . $img . '"';
+    $sqlImg = '`img`=""' . $img . '""';
 }
 
 $sql = 'UPDATE `' . $tabel . '` SET ' . $sqlContent . ' ' . $sqlImg . ' ' . $sqlLink . '  WHERE `id`="' . $id . '" ';
 $stmt = $dbh->prepare($sql);
-//echo $sql;
 $stmt->execute();
 
-//Ändra denna så manm kommer tillbaka till sidan man var på innan
 header('Location: admin' . $tabel . '.php');

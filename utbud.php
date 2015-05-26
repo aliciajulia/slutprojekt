@@ -1,6 +1,12 @@
 <?php
 include 'connectDb.php';
 
+$sql = "SELECT * FROM `utbud`";
+$stmt = $dbh->prepare($sql);
+$stmt->execute();
+$data = $stmt->fetchAll();
+//var_dump($data);
+
 $sql = "SELECT * FROM `info`";
 $stmt = $dbh->prepare($sql);
 $stmt->execute();
@@ -21,8 +27,8 @@ $dataInfo = $stmt->fetchAll();
     <body>
         <div id="wrapper">
             <div id="top">
-                <a href="index.html"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
-                <a href="www.google.se">Logga in</a>
+                <a href="index.php"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
+                <a href="login.php">Logga in</a>
             </div>
 
             <div id="nav">
@@ -45,13 +51,13 @@ $dataInfo = $stmt->fetchAll();
                     <br><br><br>
                     <!--VARA 1-->
                     <div class="vara">
-                        <h1>Dog</h1>
-                        <img src="Bilder/egna/DSC_0004.jpg" alt="hund">
+                        <h1><?php echo $data[0][1] ?></h1>
+                        <img src="<?php echo $data[0][2] ?>" alt="hund">
                         <a class="btn_popUp" href="#pop_up_dog">More info</a>
                         <div class="pop_up">
                             <div id="pop_up_dog" class="animal">
-                                <img src="Bilder/egna/DSC_0004.jpg" alt="hund">
-                                <h1>Dog</h1>
+                                <img src="<?php echo $data[0][2] ?>" alt="hund">
+                                <h1><?php echo $data[0][1] ?></h1>
                                 <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some </p>
 
                             </div>
@@ -59,93 +65,77 @@ $dataInfo = $stmt->fetchAll();
                     </div>
                     <!--VARA 2-->
                     <div class="vara">
-                        <h1>Dolphin</h1>  
-                        <img src="Bilder/egna/DSC_0010.jpg" alt="delfin">
+                        <h1><?php echo $data[1][1] ?></h1>  
+                        <img src="<?php echo $data[1][2] ?>" alt="delfin">
                         <a class="btn_popUp" href="#pop_up_dolphin">More info</a>
 
                         <div class="pop_up">
                             <div id="pop_up_dolphin" class="animal">
-                                <img src="Bilder/egna/DSC_0010.jpg" alt="delfin">
-                                <h1>Dolphin</h1>
+                                <img src="<?php echo $data[1][2] ?>" alt="delfin">
+                                <h1><?php echo $data[1][1] ?></h1>
                                 <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some </p>
                             </div>
                         </div>
                         <!--VARA 3-->
                     </div>
-                    <div class="vara"><h1>Elephant</h1> 
-                        <img src="Bilder/egna/DSC_0047.jpg" alt="elefant">
+                    <div class="vara"><h1><?php echo $data[2][1] ?></h1> 
+                        <img src="<?php echo $data[2][2] ?>" alt="elefant">
                         <a class="btn_popUp" href="#pop_up_elephant">More info</a>
 
                         <div class="pop_up">
                             <div id="pop_up_elephant" class="animal">
-                                <img src="Bilder/egna/DSC_0047.jpg" alt="elefant">
-                                <h1>Elephant</h1>
+                                <img src="<?php echo $data[2][2] ?>" alt="elefant">
+                                <h1><?php echo $data[2][1] ?></h1>
                                 <p> But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some </p>
                             </div>
                         </div>
                         <!--VARA 4-->
                     </div>
-                    <div class="vara"><h1>Sheep</h1> 
-                        <img src="Bilder/egna/DSC_0031.jpg" alt="får">
+                    <div class="vara"><h1><?php echo $data[3][1] ?></h1> 
+                        <img src="<?php echo $data[3][2] ?>" alt="får">
                         <a class="btn_popUp" href="#pop_up_sheep">More info</a>
 
                         <div class="pop_up">
 
                             <div id="pop_up_sheep" class="animal">
-                                <img src="Bilder/egna/DSC_0031.jpg" alt="får">
-                                <h1>Sheep</h1>
+                                <img src="<?php echo $data[3][2] ?>" alt="får">
+                                <h1><?php echo $data[3][1] ?></h1>
                                 <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some </p> 
                             </div>
                         </div>
                         <!--VARA 5-->
                     </div>
-                    <div class="vara"><h1>Guinea-pig</h1> 
-                        <img src="Bilder/egna/DSC_0061.jpg" alt="marsvin">
+                    <div class="vara"><h1><?php echo $data[4][1] ?></h1> 
+                        <img src="<?php echo $data[4][2] ?>" alt="marsvin">
                         <a class="btn_popUp" href="#pop_up_guinea-pig"> More info</a>
 
                         <div class="pop_up">
                             <div id="pop_up_guinea-pig" class="animal">
-                                <img src="Bilder/egna/DSC_0031.jpg" alt="får">
-                                <h1>Guninea-pig</h1>
+                                <img src="<?php echo $data[4][2] ?>" alt="får">
+                                <h1><?php echo $data[4][1] ?></h1>
                                 <p> But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some </p>
                             </div>
                         </div>
                         <!--VARA 6-->
                     </div>
-                    <div class="vara"><h1>Horse</h1> 
-                        <img src="Bilder/egna/DSC_0025.jpg" alt="häst">
+                    <div class="vara"><h1><?php echo $data[5][1] ?></h1> 
+                        <img src="<?php echo $data[5][2] ?>" alt="häst">
                         <a class="btn_popUp" href="#pop_up_horse">More info</a>
 
                         <div class="pop_up">
                             <div id="pop_up_horse" class="animal">
-                                <img src="Bilder/egna/DSC_0031.jpg" alt="får">
-                                <h1>Horse</h1>
+                                <img src="<?php echo $data[5][2] ?>" alt="får">
+                                <h1><?php echo $data[5][1] ?></h1>
                                 <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some </p>
                             </div>
                         </div>
-
                     </div>
-                </div>
-                <!--            </div>-->
+                </div>            
                 <br><br><br><br>
             </div>
             <?php
             include 'footer.php';
             ?>
-            <!--            <div id="footer">
-                            <p> Bearhug is not a real company. This page was made as a school project.
-                                Nothing displayed on this site is true. Hope you liked the website.
-                                All images on this page are taken and edited by Alicia Broberg. <br> Pictures are protected
-                                of the top Copyright Act.</p>
-                            <div id="icons">
-                                <a href="http://www.google.se/"><img src="Bilder/1399910910_RSS.png" alt="icon"></a>
-                                <a href="http://www.facebook.se/"><img src="Bilder/1399910863_Facebook.png" alt="icon"></a>
-                                <a href="http://www.gmail.com/"><img src="Bilder/1399910919_Mail.png" alt="icon"></a>
-                            </div>
-                            <div id="logga">
-                                <img src="Bilder/egna/BHlogo_2.png" alt="logga">
-                            </div>
-                        </div>-->
 
         </div>
 

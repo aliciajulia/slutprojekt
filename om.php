@@ -23,7 +23,7 @@ $dataInfo = $stmt->fetchAll();
         <div id="wrapper">
             <div id="top"> 
                 <a href="index.php"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
-                <a href="www.google.se">Logga in</a>
+                <a href="login.php">Logga in</a>
             </div>
 
             <div id="nav">

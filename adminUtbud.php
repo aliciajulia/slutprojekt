@@ -7,16 +7,11 @@ if ($_SESSION['inlog'] == 1) {
     //    hämta hem texter från db för att kunna skriva ut dom i formulären
     $sql = "SELECT * FROM `utbud`";
     $stmt = $dbh->prepare($sql);
-//    $stmt->bindParam(":anvnam", $anvnam);
-//    $stmt->bindParam(":losord", $losord);
     $stmt->execute();
     $data = $stmt->fetchAll();
-//    var_dump($data);
 
     $sql = "SELECT * FROM `info`";
     $stmt = $dbh->prepare($sql);
-//    $stmt->bindParam(":anvnam", $anvnam);
-//    $stmt->bindParam(":losord", $losord);
     $stmt->execute();
     $dataInfo = $stmt->fetchAll();
     ?>

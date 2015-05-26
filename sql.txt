@@ -1,0 +1,16 @@
+visa alla nallar med porto och klass
+
+visa X nallen med X och X
+
+frågor?
+
+
+SELECT `utbud`.*, `nalleklass`.*, `portotabell`.* FROM `utbud`, `nalleklass`, `portotabell`
+
+utbud.porto=portotabell.id
+
+HÄMTA utbud.*, nalleklass.*=utbud.nalleklass, portotabell.*=utbud.porto FROM `utbud`, `nalleklass`, `portotabell`
+
+visa
+nalle		porto	typ
+tebbybjörn	49	bärbar

@@ -11,15 +11,18 @@ include 'connectDb.php';
 session_start();
 
 function checkLogin($username, $password, $dbh) {
-    $sql = "SELECT * FROM `inlog` WHERE username='$username' AND password='$password'";
+    $sql = "SELECT * FROM `inlog` WHERE username=:username AND password=:password";
     $stmt = $dbh->prepare($sql);
-    $stmt->bindParam(":anvnam", $anvnam);
-    $stmt->bindParam(":losord", $losord);
+    $stmt->bindParam(":username", $username);
+    $stmt->bindParam(":password", $password);
     $stmt->execute();
     $login = $stmt->fetchAll();
 
     if (!empty($login)) {
         login();
+    }
+    else {
+        header ('Location: index.php');
     }
 }
 

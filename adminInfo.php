@@ -3,24 +3,25 @@ include 'connectDb.php';
 
 session_start();
 if ($_SESSION['inlog'] == 1) {
-////var_dump($_SESSION);
+
 ////    hämta hem texter från db för att kunna skriva ut dom i formulären
     $sql = "SELECT * FROM `info`";
     $stmt = $dbh->prepare($sql);
-//    $stmt->bindParam(":anvnam", $anvnam);
-//    $stmt->bindParam(":losord", $losord);
     $stmt->execute();
     $data = $stmt->fetchAll();
-//    var_dump($data);
 
     $sql = "SELECT * FROM `index`";
     $stmt = $dbh->prepare($sql);
-//    $stmt->bindParam(":anvnam", $anvnam);
-//    $stmt->bindParam(":losord", $losord);
     $stmt->execute();
     $dataImg = $stmt->fetchAll();
-//    var_dump($dataImg);
+
+    $sql = "SELECT `utbud`.*, `nalleklass`.*, `portotabell`.* FROM `utbud`, `nalleklass`, `portotabell`";
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute();
+    $dataVisa = $stmt->fetchAll();
+    var_dump($dataVisa);
     ?>
+    <!--http://dbwebb.se/uppgift/kom-igang-med-sql kolla den länken-->
 
     <!DOCTYPE html>
     <html>
@@ -129,6 +130,11 @@ if ($_SESSION['inlog'] == 1) {
                     <br>
                     <br>
 
+                    <p>HEJ</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                 </div>
                 <?php
                 include 'adminFooter.php';

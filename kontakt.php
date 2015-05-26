@@ -19,8 +19,8 @@ $dataInfo = $stmt->fetchAll();
     <body>
         <div id="wrapper">
             <div id="top">  
-                <a href="index.html"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
-                <a href="www.google.se">Logga in</a>
+                <a href="index.php"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
+                <a href="login.php">Logga in</a>
 
             </div>
 

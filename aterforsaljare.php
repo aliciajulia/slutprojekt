@@ -11,7 +11,7 @@ $stmt = $dbh->prepare($sql);
 $stmt->execute();
 $dataInfo = $stmt->fetchAll();
 
-var_dump($data[1][3]);
+//var_dump($data[1][3]);
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ var_dump($data[1][3]);
         <div id="wrapper">
             <div id="top">  
                 <a href="index.php"> <img src="Bilder/egna/BHlogo_1.png" alt="logga"></a>
-                <a href="www.google.se">Logga in</a>
+                <a href="login.php">Logga in</a>
             </div>
 
             <div id="nav">
@@ -54,16 +54,16 @@ var_dump($data[1][3]);
                 <h2>På förjande ställen finns våra varor att inhandla.</h2>
                 <div id="aterforsaljare1">
                     <div class="aterforsaljare"> <a href="http://www.ahlens.se/"><img src="<?php echo $data[0][3] ?>" alt="återförsäljare" ><h2>Åhléns</h2></a> </div>
-                    <div class="aterforsaljare"><a href="http://www.ikea.se/"><img src="Bilder/rsz_ikea-logo.jpg" alt="återförsäljare"><h2>IKEA</h2></a></div>
-                    <div class="aterforsaljare"><a href="http://www.ica.se/"><img src="Bilder/rsz_logo_supermarket0512.gif" alt="återförsäljare"><h2>ICA</h2></a></div>
-                    <div class="aterforsaljare"><a href="http://www.stadium.se/"><img src="Bilder/rsz_stadium_logo.jpg" alt="återförsäljare"><h2>Stadium</h2></a></div>
+                    <div class="aterforsaljare"><a href="http://www.ikea.se/"><img src="<?php echo $data[1][3] ?>" alt="återförsäljare"><h2>IKEA</h2></a></div>
+                    <div class="aterforsaljare"><a href="http://www.ica.se/"><img src="<?php echo $data[2][3] ?>" alt="återförsäljare"><h2>ICA</h2></a></div>
+                    <div class="aterforsaljare"><a href="http://www.stadium.se/"><img src="<?php echo $data[3][3] ?>" alt="återförsäljare"><h2>Stadium</h2></a></div>
                     <!--                    <h2>IKEA</h2><h2>ICA Supermarket</h2><h2>Stadium</h2>-->
                 </div>
                 <div id="aterforsaljare2">
-                    <div class="aterforsaljare"><a href="http://www.teamsportia.se/"><img src="Bilder/rsz_teamsportia.png" alt="återförsäljare"> <h2>Team Sportia</h2></a></div>
-                    <div class="aterforsaljare"><a href="http://www.toysrus.se/"><img src="Bilder/rsz_toys-r-us-logo.jpg" alt="återförsäljare"><h2>Toys R Us</h2></a></div>
-                    <div class="aterforsaljare"><a href="http://www.hm.se/"><img src="Bilder/rsz_hm_logga700.jpg" alt="återförsäljare"><h2>H&amp;M</h2></a></div>
-                    <div class="aterforsaljare"><a href="http://www.br-leksaker.se/"><img src="Bilder/rsz_0bd74be292ec564a8367341874d8a457.jpg" alt="återförsäljare"><h2>BR Leksaker</h2></a></div>
+                    <div class="aterforsaljare"><a href="http://www.teamsportia.se/"><img src="<?php echo $data[4][3] ?>" alt="återförsäljare"> <h2>Team Sportia</h2></a></div>
+                    <div class="aterforsaljare"><a href="http://www.toysrus.se/"><img src="<?php echo $data[5][3] ?>" alt="återförsäljare"><h2>Toys R Us</h2></a></div>
+                    <div class="aterforsaljare"><a href="http://www.hm.se/"><img src="<?php echo $data[6][3] ?>" alt="återförsäljare"><h2>H&amp;M</h2></a></div>
+                    <div class="aterforsaljare"><a href="http://www.br-leksaker.se/"><img src="<?php echo $data[7][3] ?>" alt="återförsäljare"><h2>BR Leksaker</h2></a></div>
                     <!--                    <h2>Team Sportia</h2><h2>Toys R Us</h2><h2>H&M</h2><h2>BR Leksaker</h2>-->
                 </div>
             </div>

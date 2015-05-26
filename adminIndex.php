@@ -4,6 +4,8 @@ include 'connectDb.php';
 session_start();
 //var_dump($_SESSION);
 if ($_SESSION['inlog'] == 1) {
+//        echo 'hej';
+//var_dump($_SESSION);
 //var_dump($_SESSION);
 //    hämta hem texter från db för att kunna skriva ut dom i formulären
     $sql = "SELECT * FROM `index`";
